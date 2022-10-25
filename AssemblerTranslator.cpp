@@ -107,7 +107,7 @@ int main()
 	}
 	readFile.close();
 
-	// Starting to parse
+	
 	string command, hack_command;
 	readFile.open(asmFile); 
 	while (getline(readFile, command))
@@ -389,7 +389,7 @@ int main()
 			else if (instructionC.find("M", 0) >= 0 && instructionC.find("M", 0) < instructionC.length())
 				comp = "1110000";
 		}
-		// Finding jump
+		
 		int semicolonSymbol = instructionC.find(";", 0);
 		if (instructionC.substr(semicolonSymbol + 1, 3) == "JGT")
 			jump = "001";
@@ -407,7 +407,7 @@ int main()
 			jump = "111";
 		else
 			jump = "000";
-		// Finding dest
+	
 		if (equalSign > -1 && equalSign < instructionC.length())
 		{
 			string d1, d2, d3;
